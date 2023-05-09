@@ -36,6 +36,7 @@ import Counts from './Counts';
 import QuestionList from './QuestionList';
 import HotQuestions from './HotQuestions';
 import HttpErrorContent from './HttpErrorContent';
+import FcAd from './FcAd';
 
 export {
   Avatar,
@@ -78,5 +79,6 @@ export {
   QuestionList,
   HotQuestions,
   HttpErrorContent,
+  FcAd,
 };
 export type { EditorRef, JSONSchema, UISchema };
