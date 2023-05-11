@@ -1,18 +1,32 @@
-import { FC } from 'react';
-import { Link } from 'react-router-dom';
+import { FC, useState, useEffect } from 'react';
 
-import AdImg from '@/assets/images/flashduty.jpg';
 import './index.scss';
+import type { IEffect } from './slideswitch';
+import SliderSwitch from './slideswitch';
+
+const effects: IEffect[] = [
+  'fade_in',
+  'slide_from_left',
+  'flip',
+  'grow',
+  'shrink',
+];
 
 const FcAd: FC = () => {
+  const [sliderIndex, setSliderIndex] = useState(
+    Math.floor(Math.random() * effects.length),
+  );
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSliderIndex((i) => (i + 1) % effects.length);
+    }, 5000);
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
   return (
-    <div className="mb-4">
-      <Link
-        to="https://console.flashcat.cloud?from=answer"
-        target="_blank"
-        title="Flashcat：让监控分析变简单">
-        <img src={AdImg} alt="Flashcat：让监控分析变简单" className="ad-img" />
-      </Link>
+    <div className="mb-4 fc-ad">
+      <SliderSwitch effect={effects[sliderIndex]} />
     </div>
   );
 };
