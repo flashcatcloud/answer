@@ -31,6 +31,10 @@
       animation-name: slide_from_left !important;
       animation-duration: 0.5s;
     }
+    .slide_from_right {
+      animation-name: slide_from_right !important;
+      animation-duration: 0.5s;
+    }
     .fade_in {
       animation-name: fade_in;
       animation-duration: 0.5s;
@@ -54,6 +58,16 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+@keyframes slide_from_right {
+  from {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(100vw);
   }
 }
 @keyframes flip {

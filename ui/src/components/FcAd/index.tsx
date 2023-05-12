@@ -5,7 +5,7 @@ import type { IEffect } from './slideswitch';
 import SliderSwitch from './slideswitch';
 
 const effects: IEffect[] = [
-  'fade_in',
+  'slide_from_right',
   'slide_from_left',
   'flip',
   'grow',
