@@ -1,19 +1,14 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 
-import Flashduty1 from '@/assets/images/Flashduty1.jpg';
-import Flashduty2 from '@/assets/images/Flashduty2.jpg';
-import Flashduty3 from '@/assets/images/Flashduty3.jpg';
-import Flashduty4 from '@/assets/images/Flashduty4.jpg';
-import Flashduty5 from '@/assets/images/Flashduty5.jpg';
 import './index.scss';
 
 const effectImgMap = {
-  slide_from_right: Flashduty1,
-  slide_from_left: Flashduty2,
-  flip: Flashduty3,
-  grow: Flashduty4,
-  shrink: Flashduty5,
+  slide_from_right: 'https://download.flashcat.cloud/answer.flashduty1.jpg',
+  grow: 'https://download.flashcat.cloud/answer.flashduty2.jpg',
+  flip: 'https://download.flashcat.cloud/answer.flashduty3.jpg',
+  slide_from_left: 'https://download.flashcat.cloud/answer.flashduty4.jpg',
+  shrink: 'https://download.flashcat.cloud/answer.flashduty5.jpg',
 };
 
 export type IEffect = keyof typeof effectImgMap;
